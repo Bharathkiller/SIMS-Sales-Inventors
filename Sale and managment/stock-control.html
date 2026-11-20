@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Control | SIMS</title>
+  <link rel="stylesheet" href="style.css?v=20260809-apple-luxury">
+  <script src="roles.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="app-refresh.js" defer></script>
+</head>
+<body data-page="stock" data-access="admin">
+  <header class="navbar"><h1 class="logo">Stock Control</h1><nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="admin-dashboard.html">Dashboard</a><a href="product-management.html">Products</a><a href="sales-billing.html">Sales</a><a href="reports.html">Reports</a></nav></header>
+  <main>
+    <section class="section reveal" style="--reveal-delay: 60ms;"><div class="section-head reveal" style="--reveal-delay: 100ms;"><div><h2>Inventory overview</h2><p class="section-intro">Adjust stock levels for deliveries, returns, corrections, and stock takes.</p></div><a class="btn" href="product-management.html">Manage products</a></div><div class="cards reveal" style="--reveal-delay: 140ms;">
+      <article class="card metric-card reveal" style="--reveal-delay: 180ms;"><h3>Units on hand</h3><p id="stock-units" class="big-number">0</p></article>
+      <article class="card metric-card reveal" style="--reveal-delay: 220ms;"><h3>Low-stock products</h3><p id="stock-low" class="big-number">0</p></article>
+      <article class="card metric-card reveal" style="--reveal-delay: 260ms;"><h3>Out-of-stock products</h3><p id="stock-out" class="big-number">0</p></article>
+    </div></section>
+    <section class="section reveal" style="--reveal-delay: 200ms;"><div class="table-wrap reveal" style="--reveal-delay: 240ms;"><table class="table"><thead><tr><th>Product</th><th>Category</th><th>Stock</th><th>Status</th><th>Action</th></tr></thead><tbody id="stock-body"></tbody></table></div></section>
+  </main>
+  <div id="stock-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="stock-modal-title" hidden><div class="modal-box"><h3 id="stock-modal-title">Adjust stock</h3><p id="stock-product-name" class="muted"></p><form id="stock-form"><input id="stock-product-id" type="hidden"><div class="form-grid">
+    <label class="form-field"><span>Adjustment</span><input id="stock-adjustment" type="number" step="1" required placeholder="Example: 10 or -2"></label>
+    <label class="form-field"><span>Reason (optional)</span><input id="stock-reason" maxlength="100" placeholder="Delivery, return, stock countâ€¦"></label>
+  </div><p class="note">Use a positive number to add stock and a negative number to remove it. Stock cannot go below zero.</p><div class="form-actions"><button class="btn-secondary" data-close-modal type="button">Cancel</button><button class="btn-primary" type="submit">Update stock</button></div></form></div></div>
+  <footer><p>&copy; 2026 Sales &amp; Inventory Management System</p></footer>
+</body>
+</html>

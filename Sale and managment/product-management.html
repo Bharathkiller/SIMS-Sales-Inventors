@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Management | SIMS</title>
+  <link rel="stylesheet" href="style.css?v=20260809-apple-luxury">
+  <script src="roles.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="app-refresh.js" defer></script>
+</head>
+<body data-page="products" data-access="admin">
+  <header class="navbar"><h1 class="logo">Product Management</h1><nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="admin-dashboard.html">Dashboard</a><a href="stock-control.html">Stock</a><a href="sales-billing.html">Sales</a><a href="reports.html">Reports</a></nav></header>
+  <main>
+    <section class="section reveal" style="--reveal-delay: 60ms;">
+      <div class="section-head reveal" style="--reveal-delay: 100ms;"><div><h2>Product catalog</h2><p class="section-intro">Add, update, or remove the products available for sale.</p></div><button id="add-product" class="btn-primary" type="button">Add product</button></div>
+      <div class="cards reveal" style="--reveal-delay: 140ms;">
+        <article class="card metric-card reveal" style="--reveal-delay: 180ms;"><h3>Total products</h3><p id="product-total" class="big-number">0</p></article>
+        <article class="card metric-card reveal" style="--reveal-delay: 220ms;"><h3>Categories</h3><p id="product-categories" class="big-number">0</p></article>
+        <article class="card metric-card reveal" style="--reveal-delay: 260ms;"><h3>Out of stock</h3><p id="product-out" class="big-number">0</p></article>
+      </div>
+    </section>
+    <section class="section reveal" style="--reveal-delay: 200ms;"><div class="table-wrap reveal" style="--reveal-delay: 240ms;"><table class="table"><thead><tr><th>Product</th><th>Category</th><th>Unit price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead><tbody id="products-body"></tbody></table></div></section>
+  </main>
+  <div id="product-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" hidden>
+    <div class="modal-box"><h3 id="product-modal-title">Add product</h3><form id="product-form"><input id="product-id" name="id" type="hidden"><div class="form-grid">
+      <label class="form-field"><span>Product name</span><input id="product-name" name="name" required maxlength="80" autocomplete="off"></label>
+      <label class="form-field"><span>Category</span><input id="product-category" name="category" required maxlength="60" autocomplete="off"></label>
+      <label class="form-field"><span>Unit price (&#8377;)</span><input id="product-price" name="price" type="number" min="0" step="1" required></label>
+      <label class="form-field"><span>Opening / current stock</span><input id="product-stock" name="stock" type="number" min="0" step="1" required></label>
+    </div><div class="form-actions"><button class="btn-secondary" data-close-modal type="button">Cancel</button><button class="btn-primary" type="submit">Save product</button></div></form></div>
+  </div>
+  <footer><p>&copy; 2026 Sales &amp; Inventory Management System</p></footer>
+</body>
+</html>

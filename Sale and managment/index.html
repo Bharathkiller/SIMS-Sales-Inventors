@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A browser-based sales and inventory management system.">
+  <title>SIMS | Sales & Inventory</title>
+  <link rel="stylesheet" href="style.css?v=20260809-apple-luxury">
+  <script src="roles.js?v=20260809-scroll-animations" defer></script>
+  <script src="auth.js?v=20260809-scroll-animations" defer></script>
+  <script src="app.js?v=20260809-scroll-animations" defer></script>
+</head>
+<body data-page="home">
+  <header class="navbar">
+    <h1 class="logo">SIMS</h1>
+    <nav aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#modules">Modules</a>
+      <a href="admin-dashboard.html">Dashboard</a>
+      <a href="sales-billing.html">New sale</a><a href="customer-portal.html">Customer portal</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero reveal">
+      <div class="hero-content reveal" style="--reveal-delay: 80ms;">
+        <p class="eyebrow">Simple. Connected. Local.</p>
+        <h2>Sales and inventory, in one place.</h2>
+        <p>Manage products, stock, invoices, users, and reports from a fully working browser-based system.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="admin-dashboard.html">Open dashboard</a>
+          <a class="btn" href="sales-billing.html">Create invoice</a>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="section reveal" style="--reveal-delay: 120ms;">
+      <div class="section-head reveal" style="--reveal-delay: 160ms;"><div><h2>Built for everyday operations</h2><p class="section-intro">All modules use the same data stored safely in this browser.</p></div></div>
+      <div class="cards reveal" style="--reveal-delay: 200ms;">
+        <article class="card reveal" style="--reveal-delay: 220ms;"><span class="feature-icon" aria-hidden="true">&#128230;</span><h3>Inventory tracking</h3><p>Maintain stock counts, make controlled adjustments, and spot low-stock items immediately.</p></article>
+        <article class="card reveal" style="--reveal-delay: 260ms;"><span class="feature-icon" aria-hidden="true">&#128179;</span><h3>Sales and billing</h3><p>Create invoices from in-stock products. Each sale automatically deducts inventory.</p></article>
+        <article class="card reveal" style="--reveal-delay: 300ms;"><span class="feature-icon" aria-hidden="true">&#128202;</span><h3>Live reporting</h3><p>Dashboards and reports recalculate from the data you enterâ€”no mock totals.</p></article>
+      </div>
+    </section>
+    <section id="modules" class="dark-band reveal" style="--reveal-delay: 180ms;">
+      <div class="section reveal" style="--reveal-delay: 220ms;">
+        <div class="section-head"><div><h2>System modules</h2><p class="section-intro">Choose a workspace to continue.</p></div></div>
+        <ul class="module-list">
+          <li><a class="module-link" href="admin-dashboard.html">Admin dashboard</a></li>
+          <li><a class="module-link" href="product-management.html">Product management</a></li>
+          <li><a class="module-link" href="stock-control.html">Stock control</a></li>
+          <li><a class="module-link" href="sales-billing.html">Sales &amp; billing</a></li>
+          <li><a class="module-link" href="user-management.html">User management</a></li>
+          <li><a class="module-link" href="reports.html">Reports</a></li><li><a class="module-link" href="customer-portal.html">Customer portal</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer><p>&copy; 2026 Sales &amp; Inventory Management System</p></footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Activity Report | SIMS</title>
+  <link rel="stylesheet" href="style.css?v=20260809-apple-luxury">
+  <script src="roles.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="activityReport" data-access="admin">
+  <header class="navbar"><h1 class="logo">User Activity Report</h1><nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="admin-dashboard.html">Dashboard</a><a href="user-management.html">Users</a><a href="reports.html">All reports</a></nav></header>
+  <main>
+    <section class="section"><div class="section-head"><div><h2>Activity summary</h2><p class="section-intro">An audit trail of product, stock, sales, and user actions.</p></div></div><div class="cards">
+      <article class="card metric-card"><h3>Total users</h3><p id="activity-users" class="big-number">0</p></article>
+      <article class="card metric-card"><h3>Active users</h3><p id="activity-active" class="big-number">0</p></article>
+      <article class="card metric-card"><h3>Recorded events</h3><p id="activity-events" class="big-number">0</p></article>
+    </div></section>
+    <section class="section"><div class="section-head"><div><h2>Activity log</h2></div></div><div class="table-wrap"><table class="table"><thead><tr><th>Action</th><th>Type</th><th>Date</th><th>Time</th></tr></thead><tbody id="activity-report-body"></tbody></table></div></section>
+  </main><footer><p>&copy; 2026 Sales &amp; Inventory Management System</p></footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to Sales and Inventory Management System.">
+  <title>Sign in | SIMS</title>
+  <link rel="stylesheet" href="style.css?v=20260809-apple-luxury">
+  <link rel="stylesheet" href="auth.css?v=20260809-apple-luxury">
+  <script src="roles.js?v=20260809-login-refresh" defer></script>
+  <script src="login.js?v=20260809-login-refresh" defer></script>
+</head>
+<body class="login-page">
+  <main class="login-layout">
+    <section class="login-intro">
+      <p class="logo">SIMS</p>
+      <div class="intro-copy">
+        <h1>One workspace, tailored to every role.</h1>
+        <p>Administrators run operations while customers browse products and place orders through a focused, friendly portal.</p>
+      </div>
+      <div class="login-badges"><span>Live inventory</span><span>Instant invoices</span><span>Responsive experience</span></div>
+
+      <div class="customer-showcase" aria-label="Customer shopping preview">
+        <div class="showcase-window">
+          <div class="showcase-header">
+            <span class="window-dot dot-one"></span>
+            <span class="window-dot dot-two"></span>
+            <span class="window-dot dot-three"></span>
+          </div>
+
+          <div class="showcase-grid">
+            <article class="mini-product product-feature">
+              <img src="assets/laptops.png" alt="Laptop product preview">
+              <div class="mini-meta">
+                <strong>Laptop</strong>
+                <span>₹55,000</span>
+              </div>
+            </article>
+
+            <article class="mini-product product-compact">
+              <img src="assets/mobiles.png" alt="Mobile product preview">
+              <div class="mini-meta">
+                <strong>Mobile</strong>
+                <span>₹18,000</span>
+              </div>
+            </article>
+
+            <article class="mini-product product-compact">
+              <img src="assets/headphones.png" alt="Headphones product preview">
+              <div class="mini-meta">
+                <strong>Audio</strong>
+                <span>₹2,500</span>
+              </div>
+            </article>
+
+            <article class="mini-product product-card">
+              <p class="mini-label">Today</p>
+              <strong>1,248</strong>
+              <span>Orders placed</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="login-panel" aria-label="Sign in">
+      <div class="login-card">
+        <h2>Welcome back</h2>
+        <p>Select a role to explore its workspace.</p>
+        <div class="role-switcher" aria-label="Available roles">
+          <button class="role-option" type="button" data-role="admin"><span class="role-icon" aria-hidden="true">&#128737;</span><strong>Administrator</strong><small>Manage stock, people, invoices, and reports.</small></button>
+          <button class="role-option" type="button" data-role="customer"><span class="role-icon" aria-hidden="true">&#128722;</span><strong>Customer</strong><small>Browse stock and place product orders.</small></button>
+        </div>
+        <form id="login-form">
+          <label class="form-field"><span>Email address</span><input id="login-email" type="email" autocomplete="email" required></label>
+          <label class="form-field"><span>Password</span><input id="login-password" type="password" autocomplete="current-password" required></label>
+          <button id="login-submit" class="btn-primary" type="submit" style="width:100%; margin-top:20px">Continue</button>
+          <p id="login-error" class="login-error" role="alert"></p>
+        </form>
+        <p class="demo-note">Demo credentials are automatically filled when you choose a role. This login is a front-end demonstration and is not intended for production security.</p>
+        <p class="muted"><a href="index.html">&larr; Back to home</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

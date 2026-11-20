@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Sales Report | SIMS</title>
+  <link rel="stylesheet" href="style.css?v=20260809-apple-luxury">
+  <script src="roles.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="monthlyReport" data-access="admin">
+  <header class="navbar"><h1 class="logo">Monthly Sales Report</h1><nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="admin-dashboard.html">Dashboard</a><a href="sales-billing.html">New sale</a><a href="reports.html">All reports</a></nav></header>
+  <main>
+    <section class="section"><div class="section-head"><div><h2>Current-month summary</h2><p class="section-intro">Figures update from invoices recorded this month.</p></div></div><div class="cards">
+      <article class="card metric-card"><h3>Total orders</h3><p id="monthly-orders" class="big-number">0</p></article>
+      <article class="card metric-card"><h3>Total revenue</h3><p id="monthly-revenue" class="big-number">&#8377;0</p></article>
+      <article class="card metric-card"><h3>Top-selling product</h3><p id="monthly-top-product" class="big-number">â€”</p></article>
+    </div></section>
+    <section class="section"><div class="section-head"><div><h2>Month-by-month breakdown</h2><p class="section-intro">Latest six months.</p></div></div><div class="table-wrap"><table class="table"><thead><tr><th>Month</th><th>Orders</th><th>Revenue</th></tr></thead><tbody id="monthly-sales-body"></tbody></table></div></section>
+    <section class="section"><div class="section-head"><div><h2>Monthly revenue</h2></div></div><div class="card"><div id="monthly-revenue-chart" class="bar-chart"></div></div></section>
+    <section class="section"><div class="section-head"><div><h2>Monthly orders</h2></div></div><div class="card"><div id="monthly-order-chart" class="bar-chart"></div></div></section>
+  </main><footer><p>&copy; 2026 Sales &amp; Inventory Management System</p></footer>
+</body>
+</html>
